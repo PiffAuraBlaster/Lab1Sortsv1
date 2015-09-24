@@ -17,6 +17,7 @@ void insert(char *argv[2], int argc)
 			else
 			break;
 		}
+		printf("%d ",argv[i]);
 	}
 	return 0;
 }
@@ -34,7 +35,8 @@ void selection(char *argv[], int argc);
 		argv[b]  = temp;
 	}
 	for(a=0; a<argc; a++)
-		printf("\n%d",argv[i]);
+		printf("%d ",argv[i]);
+	
 	return 0;
 }
 
@@ -52,5 +54,7 @@ void bubble(int argc, char *argv[]);
 		argv[a+1] =  temp;
 	}
 	for(a=0);a<argc; a++)
-	printf
+	printf("%d " argv[a]);
+	
+	return 0;
 }
