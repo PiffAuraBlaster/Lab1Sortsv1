@@ -1,24 +1,21 @@
 #include <stdio.h>
-#include "functions.c"
+#include "functions.h"
 
 int main (int argc, char *argv[])
 {
 
 	if (argv[1][0] == 'i')
 	{
-		puts("insert");	
+		insert(*argv[2], argc);
 	}
 	if (argv[1][0] == 's')
 	{
-		puts("selection");
+		selection(*argv[2], argc);
 	}
 	if (argv[1][0] == 'b')
 	{
-		puts("bubble");
+		bubble(*argv[2], argc);
 	}
-	//for(i = 1; i < argc; i++){
-	//	printf("%s ", argv[i]);
-	//}
 	
       return 0;
 }
