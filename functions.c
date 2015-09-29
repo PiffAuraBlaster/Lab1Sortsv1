@@ -2,10 +2,12 @@
 #include <math.h>
 
 
-void printarray(int argc, int a[]);
+void printarray(int argc, int a[])
 {
 	int i;
+	
 	for(i=0; i<argc; i++)
+	
 	{
 		printf("%d", a[i]);
 	}
@@ -13,7 +15,7 @@ void printarray(int argc, int a[]);
 }
 	
 	
-//void insert(int a[]], int argc);
+//void insert(int a[], int argc)
 //{
 //	int a, b, temp;
 //	
@@ -35,7 +37,7 @@ void printarray(int argc, int a[]);
 //}
 
 
-//void selection(char *a[], int argc);	
+//void selection(char *a[], int argc)	
 //{
 //	int a, b, temp;
 //	for(a=0; a<argc-2;a++)
@@ -53,7 +55,7 @@ void printarray(int argc, int a[]);
 //}
 
 
-//void bubble(int argc, char a[]);
+//void bubble(int argc, char a[])
 //{
 //	int a, b, temp;
 //	

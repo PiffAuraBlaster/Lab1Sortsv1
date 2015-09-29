@@ -12,18 +12,18 @@ int main (int argc, char *argv[])
 		
 		printarray(argc, a[i]);
 
-//		if (argv[1][0] == 'i')
-//	{
-//		insert(*argv[2], argc);
-//	}
-//	else if (argv[1][0] == 's')
-//	{
-//		selection(*argv[2], argc);
-//	}
-//	else if (argv[1][0] == 'b')
-//	{
-//		bubble(*argv[2], argc);
-//	}
+		if (argv[1][0] == 'i')
+		{
+			puts("insert");
+		}
+		else if (argv[1][0] == 's')
+		{
+			puts("selection");
+		}
+		else if (argv[1][0] == 'b')
+		{
+			puts("bubble");
+		}
 	
       return 0;
 }
