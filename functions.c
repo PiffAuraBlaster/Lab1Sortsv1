@@ -1,6 +1,10 @@
 #include "functions.h"
 #include <math.h>
 
+
+void printarray()
+	
+	
 void insert(char *argv[2], int argc)
 {
 	int a, b, temp;
