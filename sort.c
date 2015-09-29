@@ -10,11 +10,7 @@ int main (int argc, char *argv[])
 			sscanf(argv[i], "%d", &a[i-2]);
 		}
 		
-		
-		//for(a=0; )
-			
-		
-	
+		printarray(argc, a[i]);
 
 //		if (argv[1][0] == 'i')
 //	{
