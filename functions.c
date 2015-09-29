@@ -1,21 +1,22 @@
+#include <stdio.h>
 #include "functions.h"
 #include <math.h>
 
 
-void printarray(int argc, int a[])
+void printarray(int length, int a[])
 {
 	int i;
 	
-	for(i=0; i<argc; i++)
+	for(i=0; i<length; i++)
 	
 	{
-		printf("%d", a[i]);
+		printf("%d ", a[i]);
 	}
-	return 0;
+	return;
 }
 	
 	
-//void insert(int a[], int argc)
+void insert(int a[], int length)
 //{
 //	int a, b, temp;
 //	
