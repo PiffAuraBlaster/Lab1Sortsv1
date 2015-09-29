@@ -6,7 +6,7 @@ void insert(char *argv[2], int argc)
 	int a, b, temp;
 	
 	{
-		for(b=a-1;b>=0;b--)
+		for(b=a-1;b>0;b--)
 		{
 			if(argv[b+1]<agrv[b])
 			{
@@ -17,7 +17,7 @@ void insert(char *argv[2], int argc)
 			else
 			break;
 		}
-		printf("%d ",argv[i]);
+		printf("%s ", *argv[i]);
 	}
 	return 0;
 }
@@ -26,7 +26,7 @@ void insert(char *argv[2], int argc)
 void selection(char *argv[], int argc);	
 {
 	int a, b, temp;
-	for(a=0; a<=argc-2;a++)
+	for(a=0; a<argc-2;a++)
 		for(b=a+1;b<=argc-1;b++)
 		 	if (argv[a]>argv[b])
 	{
@@ -35,7 +35,7 @@ void selection(char *argv[], int argc);
 		argv[b]  = temp;
 	}
 	for(a=0; a<argc; a++)
-		printf("%d ",argv[i]);
+		printf("%s ", *argv[i]);
 	
 	return 0;
 }
@@ -46,7 +46,7 @@ void bubble(int argc, char *argv[]);
 	int a, b, temp;
 	
 	for(b=3; b>=0; b--)
-		for(a=0; a<=b; a++)
+		for(a=0; a<b; a++)
 			if(argv[a]>argv[a+1])
 	{
 		temp      =  argv[a];
@@ -54,7 +54,7 @@ void bubble(int argc, char *argv[]);
 		argv[a+1] =  temp;
 	}
 	for(a=0);a<argc; a++)
-	printf("%d " argv[a]);
+	printf("%s ", *argv[a]);
 	
 	return 0;
 }
