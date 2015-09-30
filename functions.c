@@ -16,26 +16,26 @@ void printarray(int length, int a[])
 }
 	
 	
-void insert(int a[], int length)
-//{
-//	int a, b, temp;
-//	
-//	{
-//		for(b=a-1;b>0;b--)
-//		{
-//			if(argv[b+1]<agrv[b])
-//			{
-//			temp       = argv[b];
-//			agrv[b]    = agrv[b+1];
-//			agrv[b+1]  = temp;
-//			}
-//			else
-//			break;
-//		}
-//		printf("%s ", *argv[i]);
-//	}
-//	return 0;
-//}
+void insert(int length, int a[])
+{
+	int i, j, temp;
+	for(i=0; i<=length; i++)
+	{
+		for(j=i-1; j>=0; j--)
+		{
+			if(a[j+1]<a[j])
+			{
+				temp   = a[j];
+				a[j]   = a[j+1];
+				a[j+1] = temp;
+			}
+			else
+				break;
+		}
+	}
+	
+	return;
+}
 
 
 //void selection(char *a[], int argc)	
