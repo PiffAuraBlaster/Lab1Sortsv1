@@ -28,6 +28,10 @@ int main (int argc, char *argv[])
 			printarray(argc-2, a);
 		}
 	
+		else if (argv[1][0] == 'm')
+		{
+			merge(argc-2, a);
+			printarray(argc-2, a);
+		}
       return 0;
 }
-
