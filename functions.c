@@ -48,20 +48,17 @@ void selection(int length, int a[])
 }
 
 
-//void bubble(int argc, char a[])
-//{
-//	int a, b, temp;
-//	
-//	for(b=3; b>=0; b--)
-//		for(a=0; a<b; a++)
-//			if(argv[a]>argv[a+1])
-//	{
-//		temp      =  argv[a];
-//		argv[a]   =  argv[a+1];
-//		argv[a+1] =  temp;
-//	}
-//	for(a=0);a<argc; a++)
-//	printf("%s ", *argv[a]);
-//	
-//	return 0;
-//}
+void bubble(int length, int a[])
+{
+	int i, j, temp;
+	
+	for(j=3; j>=0; j--)
+		for(i=0; i<=j; i++)
+			if(a[i] > a[i+1])
+			{
+				temp   = a[i];
+				a[i]   = a[i+1];
+				a[i+1] = temp;
+			}
+	return;
+}

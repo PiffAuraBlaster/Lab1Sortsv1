@@ -24,7 +24,8 @@ int main (int argc, char *argv[])
 		}
 		else if (argv[1][0] == 'b')
 		{
-			puts("bubble");
+			bubble(argc-2, a);
+			printarray(argc-2, a);
 		}
 	
       return 0;
