@@ -19,41 +19,33 @@ void printarray(int length, int a[])
 void insert(int length, int a[])
 {
 	int i, j, temp;
+	
 	for(i=0; i<=length; i++)
-	{
 		for(j=i-1; j>=0; j--)
-		{
 			if(a[j+1]<a[j])
 			{
 				temp   = a[j];
 				a[j]   = a[j+1];
 				a[j+1] = temp;
 			}
-			else
-				break;
-		}
-	}
-	
 	return;
 }
 
 
-//void selection(char *a[], int argc)	
-//{
-//	int a, b, temp;
-//	for(a=0; a<argc-2;a++)
-//		for(b=a+1;b<=argc-1;b++)
-//		 	if (argv[a]>argv[b])
-//	{
-//		temp     = argv[a];
-//		argv[a]  = argv[b];
-//		argv[b]  = temp;
-//	}
-//	for(a=0; a<argc; a++)
-//		printf("%s ", *argv[i]);
-//	
-//	return 0;
-//}
+void selection(int length, int a[])	
+{
+	int i, j, temp;
+	
+	for(i=0; i<=length-2; i++)
+		for(j=+1; j<=length-1; j++)
+			if(a[i] > a[j])
+			{ 
+				temp = a[i];
+		      	a[i] = a[j];
+			  	a[j] = temp;
+			}
+	return;			
+}
 
 
 //void bubble(int argc, char a[])

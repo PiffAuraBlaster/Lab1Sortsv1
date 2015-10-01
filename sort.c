@@ -19,7 +19,8 @@ int main (int argc, char *argv[])
 		}
 		else if (argv[1][0] == 's')
 		{
-			puts("selection");
+			selection(argc-2, a);
+			printarray(argc-2, a);
 		}
 		else if (argv[1][0] == 'b')
 		{
