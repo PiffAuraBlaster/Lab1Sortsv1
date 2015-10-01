@@ -63,7 +63,5 @@ void bubble(int length, int a[])
 	return;
 }
 
-void merge(int length, int a[])
-{
-	
-}
+
+

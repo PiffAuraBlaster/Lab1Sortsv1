@@ -1,4 +1,4 @@
-To run sort enter a command of either insert, serlection, or bubble and then enter the array of numbers seperated by spaces.
+To run sort enter a command of either insert, serlection, bubble, or merge and then enter the array of numbers seperated by spaces.
 
 Example:
 
