@@ -1,4 +1,4 @@
-all: sort.c functions.c
+all: sort.c functions.c test.c
 	gcc -o sort sort.c functions.c -I .
 	
 run: ./sort

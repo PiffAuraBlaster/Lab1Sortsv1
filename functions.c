@@ -2,7 +2,7 @@
 #include "functions.h"
 #include <math.h>
 
-
+//A function to print arrays after the functions are run.//
 void printarray(int length, int a[])
 {
 	int i;
@@ -15,12 +15,12 @@ void printarray(int length, int a[])
 	return;
 }
 	
-	
+//Function for insertion sort on an array.//
 void insert(int length, int a[])
 {
 	int i, j, temp;
 	
-	for(i=0; i<=length; i++)
+	for(i=0; i<length; i++)
 		for(j=i-1; j>=0; j--)
 			if(a[j+1]<a[j])
 			{
@@ -31,13 +31,13 @@ void insert(int length, int a[])
 	return;
 }
 
-
+//Function for void sort on an array.//
 void selection(int length, int a[])	
 {
 	int i, j, temp;
 	
-	for(i=0; i<=length-2; i++)
-		for(j=+1; j<=length-1; j++)
+	for(i=0; i< (length-2); i++)
+		for(j= i+1; j<= (length-1); j++)
 			if(a[i] > a[j])
 			{ 
 				temp = a[i];
@@ -47,18 +47,24 @@ void selection(int length, int a[])
 	return;			
 }
 
-
+//Function for a bubble sort on an array.//
 void bubble(int length, int a[])
 {
 	int i, j, temp;
 	
-	for(j=3; j>=0; j--)
-		for(i=0; i<=j; i++)
-			if(a[i] > a[i+1])
+	for(i=0; i < (length - 1); i++)
+	{
+		for (j=0; j < (length - i - 1); j++)
+		{
+			if (a[j] > a[j+1]) 
 			{
-				temp   = a[i];
-				a[i]   = a[i+1];
-				a[i+1] = temp;
+				temp   =  a[j];
+				a[j]   =  a[j+1];
+				a[j+1] =  temp;
 			}
+		} 
+	}
 	return;
 }
+
+//A function for comparing two arrays.//
