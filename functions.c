@@ -10,7 +10,7 @@ void printarray(int length, int a[])
 	for(i=0; i<length; i++)
 	
 	{
-		printf("%d ", a[i]);
+		printf("%d\n", a[i]);
 	}
 	return;
 }
@@ -67,4 +67,17 @@ void bubble(int length, int a[])
 	return;
 }
 
-//A function for comparing two arrays.//
+//A function for comparing two arrays and returns true or false;
+int compare(int a[], int b[])
+{
+	int i;
+	int n = sizeof(a) / sizeof(a[0]);
+	
+	for(i=0; i<n; i++)
+	{
+		if (a[i] != b[i]) 
+		return 0;
+	}
+	return 1;
+}
+
