@@ -10,7 +10,7 @@ void printarray(int length, int a[])
 	for(i=0; i<length; i++)
 	
 	{
-		printf("%d\n", a[i]);
+		printf("%d ", a[i]);
 	}
 	return;
 }
@@ -67,71 +67,6 @@ void bubble(int length, int a[])
 	return;
 }
 
-<<<<<<< HEAD
-void mSort(int a, int low, int mid, int high)
-{
-	int i, j, k, l, temp;
-	
-	i=low;
-	j=mid+l;
-	l=low;
-
-	while((l<=mid)&&(j<=high))
-	{
-		if(a[l]<=a[j])
-		{
-		   temp[i]=a[l];
-	       l++;
-		}
-	    else
-		{
-	       temp[i]=arr[j];
-	       j++;
-	    }
-	    i++;
-	}
-
-	if(l>mid)
-	{
-		for(k=j;k<=high;k++)
-	   {
-		   temp[i]=a[k];
-		   i++;
-	   }
-	}
-	else
-	{
-		for(k=l;k<=mid;k++)
-		{
-			temp[i]=a[k];
-			i++;
-		}
-	}
-   
-	for(k=low;k<=high;k++)
-		{
-			a[k]=temp[k];
-		}
-}
-
-void partition(int a[], int low, int high)
-{
-	int mid;
-	
-	if(low<high)
-	{
-		mid = (low+high)/2;
-		partition(a,low,mid);
-		partition(a,mid+1,high);
-		mSort(a,low,mid,high);
-	}
-	return;
-}
-
-void merge(int length, int a[])
-{
-	partition(a, 0, length-1);
-=======
 //A function for comparing two arrays and returns true or false;
 int compare(int a[], int b[])
 {
@@ -144,6 +79,5 @@ int compare(int a[], int b[])
 		return 0;
 	}
 	return 1;
->>>>>>> master
 }
 
