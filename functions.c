@@ -67,43 +67,43 @@ void bubble(int length, int a[])
 	return;
 }
 
-void merge(int *A,int *L,int leftCount,int *R,int rightCount)
- {
-	int i,j,k;
-
-	i = 0; j = 0; k =0;
-
-	while(i<leftCount && j< rightCount) 
-	{
-		if(L[i]  < R[j]) A[k++] = L[i++];
-		else A[k++] = R[j++];
-	}
-	while(i < leftCount) A[k++] = L[i++];
-	while(j < rightCount) A[k++] = R[j++];
+//Helper funciton to help sort 2 subarrays within merge//
+void mergesort(int a[], int L[], int leftlength, int R[], int rightlength)
+{
+	int i, j, k;
 	
-	return;
+	i=0;
+	j=0;
+	k=0;
+	
+	while (i<leftlength && j< rightlength)
+	{
+		if(L[i] < R[j]) a[k++] = L[i++];
+		else a[k++] = R[j++];
+	}
+	while(i < leftlength) a[k++] = L[i++];
+	while(j < rightlength) a[k++] = R[j++];
 }
 
-// Recursive function to sort an array of integers.//
-void mergesort(int n,int a[]) 
+//
+void merge(int length, int a[])
 {
-	int mid,i, *L, *R;
-	if(n < 2) return; 
-	mid = n/2;  
-
-	L = (int*)malloc(mid*sizeof(int)); 
-	R = (int*)malloc((n- mid)*sizeof(int)); 
+	int mid, i, L[], R[];
+	if(length < 2) return; 
 	
-	for(i = 0;i<mid;i++) L[i] = a[i]; 
-	for(i = mid;i<n;i++) R[i-mid] = a[i]; 
-
-	mergesort(L,mid);  
-	mergesort(R,n-mid);  
-	merge(a,L,mid,R,n-mid);  
-        free(L);
-        free(R);
-		
-		return;
+	mid = length/2; 
+	
+	L = (int*)malloc(mid*sizeof(int)); 
+	R = (int*)malloc((length- mid)*sizeof(int)); 
+	
+	for(i = 0; i<mid; i++) L[i] = a[i];
+	for(i = mid; i<length; i++) R[i-mid] = a[i];
+	
+	merge(L,mid);
+	merge(R,length-mid);
+	mergesort(a,L,mid,R, length-mid);
+	free(L);
+	free(R);
 }
 
 //A function for comparing two arrays and returns true or false//
