@@ -35,7 +35,7 @@ int main (int argc, char *argv[])
 		//This sorts the array using merge sort//
 		else if (argv[1][0] == 'm')
 		{
-			mergesort(argc-2, a);
+			MergeSort(a, argc-2);
 			printarray(argc-2, a);
 		}
       return 0;

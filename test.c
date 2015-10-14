@@ -90,4 +90,34 @@ int main(void)
 	assert(compare(w, x) == 1);
 	
 	puts("Bubble tests successful!");
+	
+	
+	
+	
+	
+	int y[1] = {1};
+	int z[1] = {1};
+	MergeSort(y, 1);
+	
+    assert(compare(y, z) == 1);
+	
+	int a1[3] = {1, 3, 2};
+	int b1[3] = {1, 2, 3};
+	MergeSort(a1, 3);
+	
+	assert(compare(a1, b1) == 1);
+	
+	int c1[4] = {1, 5 ,5, 4};
+	int d1[4] = {1, 4, 5, 5};
+	MergeSort(c1, 4);
+	
+	assert(compare(u, v) == 1);
+	
+	int f1[5] = {-1, 0, 4, 3};
+	int g1[5] = {-1, 0, 3, 4};
+	MergeSort(f1, 5);
+	
+	assert(compare(w, x) == 1);
+	
+	puts("MergeSort tests successful!");
 }
