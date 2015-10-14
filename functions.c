@@ -10,7 +10,7 @@ void printarray(int length, int a[])
 	for(i=0; i<length; i++)
 	
 	{
-		printf("%d\n", a[i]);
+		printf("%d ", a[i]);
 	}
 	return;
 }
@@ -67,7 +67,46 @@ void bubble(int length, int a[])
 	return;
 }
 
-//A function for comparing two arrays and returns true or false;
+void merge(int *A,int *L,int leftCount,int *R,int rightCount)
+ {
+	int i,j,k;
+
+	i = 0; j = 0; k =0;
+
+	while(i<leftCount && j< rightCount) 
+	{
+		if(L[i]  < R[j]) A[k++] = L[i++];
+		else A[k++] = R[j++];
+	}
+	while(i < leftCount) A[k++] = L[i++];
+	while(j < rightCount) A[k++] = R[j++];
+	
+	return;
+}
+
+// Recursive function to sort an array of integers.//
+void mergesort(int n,int a[]) 
+{
+	int mid,i, *L, *R;
+	if(n < 2) return; 
+	mid = n/2;  
+
+	L = (int*)malloc(mid*sizeof(int)); 
+	R = (int*)malloc((n- mid)*sizeof(int)); 
+	
+	for(i = 0;i<mid;i++) L[i] = a[i]; 
+	for(i = mid;i<n;i++) R[i-mid] = a[i]; 
+
+	mergesort(L,mid);  
+	mergesort(R,n-mid);  
+	merge(a,L,mid,R,n-mid);  
+        free(L);
+        free(R);
+		
+		return;
+}
+
+//A function for comparing two arrays and returns true or false//
 int compare(int a[], int b[])
 {
 	int i;

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "functions.h"
 
 int main (int argc, char *argv[])
@@ -31,6 +32,12 @@ int main (int argc, char *argv[])
 			printarray(argc-2, a);
 		}
 	
+		//This sorts the array using merge sort//
+		else if (argv[1][0] == 'm')
+		{
+			mergesort(argc-2, a);
+			printarray(argc-2, a);
+		}
       return 0;
 }
 
